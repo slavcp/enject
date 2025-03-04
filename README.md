@@ -1,4 +1,4 @@
-# krinject
+# enject
 x64 electron injector that intercepts the WNDPROC to fix a bug in chromium
 
 
