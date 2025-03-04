@@ -1,5 +1,5 @@
 [package]
-name = "krinject"
+name = "enject"
 version = "0.1.0"
 description = "krunker"
 edition = "2021"
