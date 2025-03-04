@@ -1,10 +1,8 @@
-// Standard library imports
+
 use std::mem::transmute;
 
-// Windows core
 use windows::core::*;
 
-// Windows API imports
 use windows::Win32::{
     Foundation::{BOOL, *},
     System::{Diagnostics::ToolHelp::*, SystemServices::*, Threading::*},
