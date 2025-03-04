@@ -6,7 +6,7 @@ x64 electron injector that intercepts the WNDPROC to fix a bug in chromium
 in chromium versions past ~97 holding and dragging the cursor freezes any current websocket connection if running with the flag `--disable-frame-rate-limit`
 
 ## build
-prerequisites: [cargo](https://doc.rust-lang.org/stable/cargo/getting-started/installation.html)
+prerequisites: [Rust + Cargo](https://doc.rust-lang.org/stable/cargo/getting-started/installation.html)
 
 1. git clone https://github.com/slavcp/enject.git
 1. cd enject
