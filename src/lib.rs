@@ -1,11 +1,9 @@
 
 use std::mem::transmute;
 
-use windows::core::*;
-
 use windows::Win32::{
     Foundation::{BOOL, *},
-    System::{Diagnostics::ToolHelp::*, SystemServices::*, Threading::*},
+    System::{ SystemServices::*, Threading::*},
     UI::WindowsAndMessaging::*,
 };
 
@@ -80,7 +78,7 @@ extern "system" fn wnd_proc(
     lparam: LPARAM,
 ) -> LRESULT {
     unsafe {
-        if message == WM_MOUSEMOVE || message == WM_LBUTTONDOWN {
+        if message == WM_MOUSEMOVE || message == WM_LBUTTONDOWN || message == WM_LBUTTONDBLCLK || message == WM_RBUTTONDOWN  || message == WM_RBUTTONDBLCLK   {
             wparam = WPARAM(wparam.0 & !MK_LBUTTON.0 as usize);
         }
         CallWindowProcW(PREV_WNDPROC, window, message, wparam, lparam)
